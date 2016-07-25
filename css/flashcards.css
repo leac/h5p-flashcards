@@ -20,11 +20,19 @@
   margin: 0;
 }
 
+.dir-rtl .h5p-flashcards .h5p-title {
+  text-align: right;
+}
+
 .h5p-flashcards .h5p-description {
   text-align: left;
   margin: 0 0.5em;
   border-bottom: 0.1em solid #ddd;
   padding: 0.375em 0 0.375em;
+}
+
+.dir-rtl .h5p-flashcards .h5p-description {
+  text-align: right;
 }
 
 .h5p-flashcards .h5p-inner {
@@ -181,6 +189,12 @@
   font-size: 1em;
 }
 
+.dir-rtl .h5p-flashcards .h5p-inner .h5p-answer .h5p-input.h5p-correct:after {
+  right: auto;
+  left: 2.5em;
+  
+}
+
 .h5p-flashcards .h5p-inner .h5p-answer .h5p-input.h5p-wrong:after {
   content: "\f00d";
   font-family: 'H5PFontAwesome4';
@@ -191,10 +205,22 @@
   font-size: 1em;
 }
 
+.dir-rtl .h5p-flashcards .h5p-inner .h5p-answer .h5p-input.h5p-wrong:after {
+  right: auto;
+  left: 2.5em;
+}
+
+
 /* If tip is present, correct/wrong marker has to be moved to the left */
 .h5p-flashcards .h5p-inner .h5p-answer .h5p-input.has-tip:after {
   right: 4.5em;
 }
+
+.dir-rtl .h5p-flashcards .h5p-inner .h5p-answer .h5p-input.has-tip:after {
+  right: auto;
+  left: 4.5em;
+}
+
 
 .h5p-flashcards .h5p-textinput {
   position: relative;
@@ -297,10 +323,22 @@
   right: 0.375em;
 }
 
+.dir-rtl .h5p-flashcards .h5p-next {
+  right: auto;
+  left: 0.375em;
+}
+
+
 .h5p-flashcards .h5p-previous {
   position: absolute;
   left: 0.375em;
 }
+
+.dir-rtl .h5p-flashcards .h5p-previous {
+  left: auto;
+  right: 0.375em;
+}
+
 
 .h5p-flashcards .h5p-button.h5p-next:after {
   font-family: 'H5PFontAwesome4';
@@ -308,11 +346,23 @@
   margin-left: 0.1875em;
 }
 
+.dir-rtl .h5p-flashcards .h5p-button.h5p-next:after {
+  margin-left: 0;
+  margin-right: 0.1875em;
+}
+
+
 .h5p-flashcards .h5p-button.h5p-previous:before {
   font-family: 'H5PFontAwesome4';
   content: "\f053";
   margin-right: 0.1875em;
 }
+
+.dir-rtl .h5p-flashcards .h5p-button.h5p-previous:before {
+  margin-right: 0;
+  margin-left: 0.1875em;
+}
+
 
 .h5p-flashcards .h5p-hidden {
   display: none;
@@ -326,6 +376,11 @@
   position: absolute;
   font-weight: bold;
 }
+.dir-rtl .h5p-flashcards .h5p-solution {
+  left: auto;
+  right: 0;
+}
+
 .h5p-flashcards .h5p-solution > span {
   display: inline-block;
   position: relative;
@@ -370,4 +425,8 @@ button::-moz-focus-inner {
   position: absolute;
   right: 2em;
   top: 1.5em;
+}
+.dir-rtl .h5p-flashcards .joubel-tip-container {
+  right: auto;
+  left: 2em;
 }
